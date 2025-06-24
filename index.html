@@ -1,20 +1,20 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-Waste Hero</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
     }
     header {
       background-color: #2e7d32;
       color: white;
-      text-align: center;
       padding: 1.5rem;
+      text-align: center;
     }
     nav {
       background-color: #e0e0e0;
@@ -30,10 +30,9 @@
     }
     .container {
       max-width: 900px;
-      margin: 2rem auto;
+      margin: auto;
       padding: 1.5rem;
       background-color: white;
-      border-radius: 8px;
     }
     section {
       margin-bottom: 2rem;
@@ -57,129 +56,63 @@
       border-left: 4px solid #2e7d32;
       margin-bottom: 1rem;
     }
-    .codegen-toggle {
-      text-align: center;
-      margin-top: 3rem;
-    }
-    .codegen-container {
-      display: none;
-      margin-top: 1rem;
-    }
-    textarea, input {
-      width: 100%;
-      margin-top: 0.5rem;
-      padding: 0.5rem;
-      font-family: monospace;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    button {
-      padding: 0.75rem 1.5rem;
-      background-color: #2e7d32;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
-      margin-top: 1rem;
-    }
-    button:hover {
-      background-color: #256528;
-    }
   </style>
 </head>
 <body>
   <header>
     <h1>E-Waste Hero</h1>
     <p>Be a hero for the environment. Recycle your old tech!</p>
-  </header>  <nav>
+  </header>
+
+  <nav>
     <a href="#what">What is E-Waste?</a>
     <a href="#why">Why Recycle?</a>
     <a href="#how">How to Help</a>
     <a href="#tips">Tips</a>
-    <a href="#codegen">HTML Generator</a>
-  </nav>  <div class="container">
+  </nav>
+
+  <div class="container">
     <section id="what">
       <h2>What is E-Waste?</h2>
       <p>Electronic waste (E-waste) refers to discarded electronic devices such as smartphones, laptops, tablets, and other gadgets. These items often contain toxic materials like lead, mercury, and cadmium which are harmful to both people and the environment.</p>
-    </section><section id="why">
-  <h2>Why Should We Recycle E-Waste?</h2>
-  <div class="card">
-    <strong>Environmental Protection:</strong> Prevent harmful chemicals from polluting soil and water.
+    </section>
+
+    <section id="why">
+      <h2>Why Should We Recycle E-Waste?</h2>
+      <div class="card">
+        <strong>Environmental Protection:</strong> Prevent harmful chemicals from polluting soil and water.
+      </div>
+      <div class="card">
+        <strong>Recover Valuable Materials:</strong> Extract gold, silver, copper, and more from old electronics.
+      </div>
+      <div class="card">
+        <strong>Reduce Waste:</strong> Minimize landfill usage and conserve resources.
+      </div>
+    </section>
+
+    <section id="how">
+      <h2>How You Can Help</h2>
+      <ul>
+        <li>Donate or sell your working old devices.</li>
+        <li>Use certified recycling points in your area.</li>
+        <li>Spread awareness among your friends and family.</li>
+        <li>Join clean tech movements and e-waste drives.</li>
+      </ul>
+    </section>
+
+    <section id="tips">
+      <h2>Quick Tips</h2>
+      <ul>
+        <li>Backup and wipe data before recycling devices.</li>
+        <li>Do not burn or break electronics — it's hazardous!</li>
+        <li>Label dead batteries and keep them in a safe box for drop-off.</li>
+        <li>Encourage schools and offices to arrange e-waste collection bins.</li>
+      </ul>
+    </section>
   </div>
-  <div class="card">
-    <strong>Recover Valuable Materials:</strong> Extract gold, silver, copper, and more from old electronics.
-  </div>
-  <div class="card">
-    <strong>Reduce Waste:</strong> Minimize landfill usage and conserve resources.
-  </div>
-</section>
 
-<section id="how">
-  <h2>How You Can Help</h2>
-  <ul>
-    <li>Donate or sell your working old devices.</li>
-    <li>Use certified recycling points in your area.</li>
-    <li>Spread awareness among your friends and family.</li>
-    <li>Join clean tech movements and e-waste drives.</li>
-  </ul>
-</section>
-
-<section id="tips">
-  <h2>Quick Tips</h2>
-  <ul>
-    <li>Backup and wipe data before recycling devices.</li>
-    <li>Do not burn or break electronics — it's hazardous!</li>
-    <li>Label dead batteries and keep them in a safe box for drop-off.</li>
-    <li>Encourage schools and offices to arrange e-waste collection bins.</li>
-  </ul>
-</section>
-
-<section id="codegen">
-  <h2>HTML Generator (Developer Tool)</h2>
-  <label for="pageTitle">Page Title</label>
-  <input type="text" id="pageTitle" placeholder="Enter page title...">
-
-  <label for="pageHeader">Header</label>
-  <input type="text" id="pageHeader" placeholder="Enter header...">
-
-  <label for="pageContent">Content (HTML allowed)</label>
-  <textarea id="pageContent" placeholder="Enter main content..."></textarea>
-
-  <button onclick="generateHTML()">Generate Full HTML</button>
-
-  <label for="outputHTML">Generated HTML Code</label>
-  <textarea id="outputHTML" rows="10" readonly></textarea>
-</section>
-
-  </div>  <footer>
+  <footer>
     <p>&copy; 2025 E-Waste Hero | Built to protect the planet</p>
-  </footer>  <script>
-    function generateHTML() {
-      const title = document.getElementById('pageTitle').value;
-      const header = document.getElementById('pageHeader').value;
-      const content = document.getElementById('pageContent').value;
-
-      const html = `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${title}</title>
-  <style>
-    body { font-family: Arial; padding: 2rem; background: #f4f4f4; }
-    header { background: #2e7d32; color: white; padding: 1rem; text-align: center; }
-    .content { background: white; padding: 2rem; margin-top: 2rem; border-radius: 8px; }
-  </style></head>
-<body>
-  <header><h1>${header}</h1></header>
-  <div class="content">
-    ${content}
-  </div>
-</body>
-</html>`;document.getElementById('outputHTML').value = html;
-}
-
-  </script>
+  </footer>
 </body>
 </html>
