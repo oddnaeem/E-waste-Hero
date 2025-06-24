@@ -2,109 +2,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>E-Waste Hero</title>
+  <title>HTML Generator - E-Waste Hero</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
     }
     header {
       background-color: #2e7d32;
       color: white;
-      padding: 1.5rem;
       text-align: center;
-    }
-    nav {
-      background-color: #e0e0e0;
-      display: flex;
-      justify-content: center;
       padding: 1rem;
-      gap: 1rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: #2e7d32;
-      font-weight: bold;
     }
     .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 1.5rem;
-      background-color: white;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    section {
-      margin-bottom: 2rem;
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 1rem;
     }
-    h2 {
-      color: #2e7d32;
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
-    ul {
-      padding-left: 20px;
-    }
-    footer {
+    button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
       background-color: #2e7d32;
       color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
     }
-    .card {
-      background: #f9f9f9;
+    button:hover {
+      background-color: #256528;
+    }
+    #output {
+      margin-top: 2rem;
+      white-space: pre-wrap;
+      background: #eee;
       padding: 1rem;
-      border-left: 4px solid #2e7d32;
-      margin-bottom: 1rem;
+      border-radius: 5px;
+    }
+    textarea.code {
+      font-family: monospace;
+      height: 300px;
+      background: #f0f0f0;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>E-Waste Hero</h1>
-    <p>Be a hero for the environment. Recycle your old tech!</p>
-  </header>  <nav>
-    <a href="#what">What is E-Waste?</a>
-    <a href="#why">Why Recycle?</a>
-    <a href="#how">How to Help</a>
-    <a href="#tips">Tips</a>
-  </nav>  <div class="container">
-    <section id="what">
-      <h2>What is E-Waste?</h2>
-      <p>Electronic waste (E-waste) refers to discarded electronic devices such as smartphones, laptops, tablets, and other gadgets. These items often contain toxic materials like lead, mercury, and cadmium which are harmful to both people and the environment.</p>
-    </section><section id="why">
-  <h2>Why Should We Recycle E-Waste?</h2>
-  <div class="card">
-    <strong>Environmental Protection:</strong> Prevent harmful chemicals from polluting soil and water.
-  </div>
-  <div class="card">
-    <strong>Recover Valuable Materials:</strong> Extract gold, silver, copper, and more from old electronics.
-  </div>
-  <div class="card">
-    <strong>Reduce Waste:</strong> Minimize landfill usage and conserve resources.
-  </div>
-</section>
+    <h1>E-Waste Hero: HTML Generator</h1>
+    <p>Create your own informative HTML page</p>
+  </header>
+  <div class="container">
+    <label for="title">Page Title</label>
+    <input type="text" id="title" placeholder="Enter page title..."><label for="header">Header Text</label>
+<input type="text" id="header" placeholder="Enter header heading...">
 
-<section id="how">
-  <h2>How You Can Help</h2>
-  <ul>
-    <li>Donate or sell your working old devices.</li>
-    <li>Use certified recycling points in your area.</li>
-    <li>Spread awareness among your friends and family.</li>
-    <li>Join clean tech movements and e-waste drives.</li>
-  </ul>
-</section>
+<label for="content">Main Content</label>
+<textarea id="content" placeholder="Write your page content (HTML allowed)..."></textarea>
 
-<section id="tips">
-  <h2>Quick Tips</h2>
-  <ul>
-    <li>Backup and wipe data before recycling devices.</li>
-    <li>Do not burn or break electronics — it's hazardous!</li>
-    <li>Label dead batteries and keep them in a safe box for drop-off.</li>
-    <li>Encourage schools and offices to arrange e-waste collection bins.</li>
-  </ul>
-</section>
+<button onclick="generateHTML()">Generate HTML</button>
 
-  </div>  <footer>
-    <p>&copy; 2025 E-Waste Hero | Built to protect the planet</p>
-  </footer>
+<label for="output">Generated HTML Code</label>
+<textarea id="output" class="code" readonly></textarea>
+
+  </div>  <script>
+    function generateHTML() {
+      const title = document.getElementById('title').value;
+      const header = document.getElementById('header').value;
+      const content = document.getElementById('content').value;
+
+      const htmlCode = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${title}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 2rem;
+      color: #333;
+    }
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .content {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      max-width: 900px;
+      margin: auto;
+    }
+  </style></head>
+<body>
+  <header>
+    <h1>${header}</h1>
+  </header>
+  <div class="content">
+    ${content}
+  </div>
+</body>
+</html>`;document.getElementById('output').value = htmlCode;
+}
+
+  </script>
 </body>
 </html>
